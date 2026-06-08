@@ -4,7 +4,7 @@ import { CLINIC } from '../constants/data'
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen bg-warm-white flex items-center overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-screen bg-warm-white flex items-center overflow-hidden pt-24">
       {/* Decorative blobs */}
       <div className="absolute top-10 right-0 w-96 h-96 rounded-full bg-sage-light/50 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-72 h-72 rounded-full bg-terracotta-light/60 blur-3xl pointer-events-none" />
@@ -71,7 +71,7 @@ export default function Hero() {
               {/* Main card */}
               <div className="bg-gradient-to-br from-sage-light/70 to-terracotta-light/60 rounded-3xl p-8 border border-border-warm shadow-2xl">
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white shadow-lg mb-4 p-2">
+                  <div className="inline-flex items-center justify-center w-36 h-36 rounded-full bg-white shadow-xl mb-5 p-3">
                     <img src="/logo.png" alt="Aayurphysio" className="w-full h-full object-contain" />
                   </div>
                   <h3 className="font-display text-2xl text-text-main font-semibold">Aayurphysio</h3>
