@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Star, ExternalLink, Send, CheckCircle, MessageSquare, ThumbsUp } from 'lucide-react'
+import { Star, ExternalLink, Send, CheckCircle, MessageSquare, ThumbsUp, Loader2 } from 'lucide-react'
 import { TESTIMONIALS, CLINIC } from '../constants/data'
 
 function StarPicker({ value, onChange }) {
@@ -36,6 +36,7 @@ export default function Testimonials() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' })
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
 
   const validate = () => {
     const e = {}
@@ -45,20 +46,37 @@ export default function Testimonials() {
     return e
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
-    // Build mailto link
-    const subject = encodeURIComponent(`Patient Review from ${form.name} — ${rating}★`)
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nPhone: ${form.phone || 'Not provided'}\nRating: ${rating}/5 (${ratingLabel[rating]})\n\nReview:\n${form.message}`
-    )
-    window.open(`mailto:${CLINIC.email}?subject=${subject}&body=${body}`)
-    setSubmitted(true)
-    setForm({ name: '', phone: '', message: '' })
-    setRating(0)
+    setSending(true)
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_WEB3FORMS_KEY',
+          subject: `⭐ New Patient Review (${rating}/5) from ${form.name}`,
+          from_name: form.name,
+          email: CLINIC.email,
+          message: `Name: ${form.name}\nPhone: ${form.phone || 'Not provided'}\nRating: ${rating}/5 — ${ratingLabel[rating]}\n\nReview:\n${form.message}`,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+        setForm({ name: '', phone: '', message: '' })
+        setRating(0)
+      } else {
+        setErrors({ submit: 'Something went wrong. Please try again.' })
+      }
+    } catch {
+      setErrors({ submit: 'Network error. Please try again.' })
+    } finally {
+      setSending(false)
+    }
   }
 
   const tabs = [
@@ -298,16 +316,23 @@ export default function Testimonials() {
                         {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message}</p>}
                       </div>
 
+                      {errors.submit && (
+                        <p className="text-xs text-red-500 text-center">{errors.submit}</p>
+                      )}
+
                       <button
                         type="submit"
-                        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-sage-dark hover:bg-bark text-white font-body font-semibold text-sm transition-colors duration-200 shadow-md"
+                        disabled={sending}
+                        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-sage-dark hover:bg-bark text-white font-body font-semibold text-sm transition-colors duration-200 shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
                       >
-                        <Send size={15} />
-                        Submit Review
+                        {sending
+                          ? <><Loader2 size={15} className="animate-spin" /> Sending...</>
+                          : <><Send size={15} /> Submit Review</>
+                        }
                       </button>
 
                       <p className="font-body text-xs text-text-muted text-center">
-                        Your review will be sent to our team at {CLINIC.email}
+                        Your review will be sent directly to our team
                       </p>
                     </form>
                   </>

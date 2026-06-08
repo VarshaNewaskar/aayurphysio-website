@@ -28,50 +28,98 @@ export const TEAM = [
   { name: 'Dr. Bharati Deokar-Sharma', qualifications: '', role: 'Orthopaedic Surgeon', initials: 'BD', color: 'bark' },
 ]
 
-export const SERVICES = [
-  {
-    id: 1,
-    name: 'PIVD Treatment',
-    description: 'Specialized care for Prolapsed Intervertebral Disc — relieving back and neck pain through targeted manual therapy and rehabilitation.',
-    icon: 'spine',
-    color: 'sage',
-  },
-  {
-    id: 2,
-    name: "Pregnancy & Women's Wellness",
-    description: 'Nutrition guidance and physiotherapy tailored for pregnant women — promoting safe movement, posture and recovery through every trimester.',
-    icon: 'heart',
-    color: 'terracotta',
-  },
-  {
-    id: 3,
-    name: 'Orthopaedic Physiotherapy',
-    description: 'Knee, hip, shoulder and joint pain — evidence-based rehab programs to restore function and reduce dependency on medication.',
-    icon: 'bone',
-    color: 'bark',
-  },
-  {
-    id: 4,
-    name: 'Neurological Rehabilitation',
-    description: "Supportive therapy for stroke, Parkinson's, and neuropathy patients — restoring balance, mobility and independence step by step.",
-    icon: 'brain',
-    color: 'sage',
-  },
-  {
-    id: 5,
-    name: 'Sports Injury Management',
-    description: 'Rapid recovery programs for athletes — sprains, strains, ligament injuries and performance-based conditioning for return to play.',
-    icon: 'activity',
-    color: 'terracotta',
-  },
-  {
-    id: 6,
-    name: 'Dry Needling & Manual Therapy',
-    description: 'Advanced hands-on techniques including dry needling, soft tissue mobilization and joint manipulation to release pain and restore range of motion.',
-    icon: 'needle',
-    color: 'bark',
-  },
-]
+export const SERVICES = {
+  physiotherapy: [
+    {
+      id: 1,
+      name: 'Orthopaedic Physiotherapy',
+      description: 'Evidence-based treatment for joint, muscle and bone conditions — including knee, hip, shoulder and spine disorders. Our therapists use targeted manual therapy, exercise prescription and electrotherapy to restore strength and mobility without dependency on medication.',
+      icon: 'bone',
+      color: 'sage',
+    },
+    {
+      id: 2,
+      name: 'Sports Physiotherapy',
+      description: 'Targeted rehabilitation for sports-related injuries using biomechanical analysis, sport-specific conditioning and return-to-play protocols. Suitable for amateur fitness enthusiasts and competitive athletes alike.',
+      icon: 'activity',
+      color: 'terracotta',
+    },
+    {
+      id: 3,
+      name: 'Neuro Physiotherapy',
+      description: 'Specialised rehabilitation for stroke, Parkinson\'s disease, multiple sclerosis and spinal cord injuries. Focused on rebuilding movement patterns, improving balance and restoring daily independence through progressive therapy.',
+      icon: 'brain',
+      color: 'bark',
+    },
+    {
+      id: 4,
+      name: 'PIVD Treatment',
+      description: 'Comprehensive care for Prolapsed Intervertebral Disc causing back and neck pain. Combines spinal decompression, core stabilisation, postural correction and manual therapy to relieve nerve compression and prevent recurrence.',
+      icon: 'spine',
+      color: 'sage',
+    },
+    {
+      id: 5,
+      name: 'Vertigo Assessment & Treatment',
+      description: 'Specialised vestibular rehabilitation using BPPV repositioning manoeuvres (Epley, Semont) and balance retraining exercises. Effectively treats dizziness, positional vertigo and vestibular dysfunction — often resolving in just 1–3 sessions.',
+      icon: 'rotate',
+      color: 'terracotta',
+    },
+    {
+      id: 6,
+      name: 'Dry Needling & Manual Therapy',
+      description: 'Advanced hands-on techniques including dry needling for trigger point release, soft tissue mobilisation, joint manipulation and myofascial release. Provides rapid pain relief and restores full range of motion.',
+      icon: 'needle',
+      color: 'bark',
+    },
+  ],
+  wellness: [
+    {
+      id: 7,
+      name: 'Ayurveda Treatment',
+      description: 'Traditional Ayurvedic therapies including Panchakarma detox, Abhyanga (therapeutic massage), Shirodhara and herbal treatments. Guided by our Ayurveda physician to restore natural body balance, improve immunity and promote long-term holistic wellness.',
+      icon: 'leaf',
+      color: 'sage',
+    },
+    {
+      id: 8,
+      name: 'Nutrition Counselling',
+      description: 'Personalised dietary plans crafted for your unique health goals — weight management, sports performance, pregnancy nutrition, diabetes and lifestyle disorders. Backed by clinical assessment and evidence-based dietary science.',
+      icon: 'apple',
+      color: 'terracotta',
+    },
+    {
+      id: 9,
+      name: 'Yoga Therapy',
+      description: 'Therapeutic yoga tailored to your health condition — not a generic fitness class. Addresses chronic pain, stress, flexibility, respiratory conditions and mental wellness through carefully sequenced asanas, pranayama and relaxation techniques.',
+      icon: 'sun',
+      color: 'bark',
+    },
+    {
+      id: 10,
+      name: 'Strength & Conditioning',
+      description: 'Structured fitness programs designed by qualified coaches to build functional strength, correct muscular imbalances and prevent injuries. Suitable post-rehabilitation patients and those seeking guided performance training.',
+      icon: 'dumbbell',
+      color: 'sage',
+    },
+  ],
+  specialised: [
+    {
+      id: 11,
+      name: 'Antenatal & Postnatal Care',
+      description: 'Comprehensive physiotherapy and wellness support through every stage of pregnancy and postpartum recovery. Includes pelvic floor rehabilitation, diastasis recti management, posture correction, safe exercise guidance and lactation support.',
+      icon: 'heart',
+      color: 'terracotta',
+    },
+    {
+      id: 12,
+      name: 'Foot Scan Assessment & Treatment',
+      description: 'Advanced computerised gait and foot pressure analysis to identify flat feet, high arches, overpronation and biomechanical imbalances. Followed by custom orthotic prescription, targeted foot exercises and footwear guidance.',
+      icon: 'footprints',
+      color: 'bark',
+    },
+  ],
+}
 
 export const TESTIMONIALS = [
   {
