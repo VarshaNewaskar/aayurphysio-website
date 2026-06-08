@@ -11,6 +11,7 @@ export const CLINIC = {
   reviews: '22',
   experience: '7+',
   mapsUrl: 'https://maps.google.com/?q=Aayurphysio+Wellness+Centre+Nigdi+Pune',
+  googleReviewsUrl: 'https://share.google/nWrkgnVON68mZFTre',
   mapsEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.1243840261086!2d73.76835997465533!3d18.65841356495023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9fa90cc7d29%3A0xe396e4202e4a5c20!2sAayurphysio%20Wellness%20Centre(%20Ayurveda%2C%20physiotherapy%2Cnutrition%20and%20yoga))!5e0!3m2!1sen!2sin!4v1780769196280!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
   whatsappMessage: 'Hi, I would like to book an appointment at Aayurphysio Wellness Centre.',
 }

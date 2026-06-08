@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
-import { CLINIC, TEAM } from '../constants/data'
+import { CLINIC } from '../constants/data'
 
 export default function Hero() {
   return (
@@ -76,29 +76,16 @@ export default function Hero() {
                     <img src="/logo.png" alt="Aayurphysio" className="w-full h-full object-contain" />
                   </div>
                 </div>
+                <h3 className="font-display text-2xl text-text-main font-semibold text-center mb-1">Aayurphysio</h3>
+                <p className="font-body text-sm text-text-muted text-center mb-5">Wellness Centre, Nigdi</p>
 
-                <p className="font-body text-xs text-text-muted uppercase tracking-wider mb-3 text-center">Meet Our Specialists</p>
-
-                {/* Top 3 team members */}
                 <div className="space-y-3">
-                  {TEAM.slice(0, 3).map(member => {
-                    const avatarColors = {
-                      sage: 'bg-sage-light text-sage-dark',
-                      terracotta: 'bg-terracotta-light text-terracotta',
-                      bark: 'bg-bark-light/30 text-bark',
-                    }
-                    return (
-                      <div key={member.name} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3">
-                        <div className={`w-9 h-9 rounded-full flex items-center justify-center font-body font-bold text-xs flex-shrink-0 ${avatarColors[member.color]}`}>
-                          {member.initials.replace('2','')}
-                        </div>
-                        <div>
-                          <div className="font-body text-sm font-semibold text-text-main leading-tight">{member.name}</div>
-                          <div className="font-body text-xs text-text-muted">{member.role}</div>
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {['PIVD & Spine Care', "Women's Wellness", 'Sports Rehab', 'Neuro Physiotherapy'].map(s => (
+                    <div key={s} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3">
+                      <span className="w-2.5 h-2.5 rounded-full bg-sage-dark flex-shrink-0" />
+                      <span className="font-body text-sm font-medium text-text-mid">{s}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
