@@ -28,8 +28,12 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-24">
               {/* Logo */}
-              <a href="#hero" className="flex items-center gap-2">
+              <a href="#hero" className="flex items-center gap-3">
                 <img src="/logo.png" alt="Aayurphysio Wellness Centre" className="h-20 w-auto object-contain" />
+                <div className="leading-tight">
+                  <div className="font-body font-bold text-[#1A3A6C] text-lg tracking-widest uppercase">Aayurphysio</div>
+                  <div className="font-body font-semibold text-[#1A3A6C] text-sm tracking-wide">Wellness Centre</div>
+                </div>
               </a>
 
               {/* Desktop nav links */}
