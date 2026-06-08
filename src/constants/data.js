@@ -16,9 +16,15 @@ export const CLINIC = {
 }
 
 export const TEAM = [
-  { name: 'Dr. Sourabh Deshmukh', role: 'Senior Physiotherapist', initials: 'SD', color: 'sage' },
-  { name: 'Dr. Amruta Vedpathak', role: "Women's Wellness Specialist", initials: 'AV', color: 'terracotta' },
-  { name: 'Dr. Amruta Deshmukh', role: 'Neuro & Sports Rehab', initials: 'AD', color: 'bark' },
+  { name: 'Dr. Amruta Deshmukh', qualifications: 'BAMS, Ph.D', role: 'Ayurveda Physician & Sports Nutritionist', initials: 'AD', color: 'sage' },
+  { name: 'Dr. Saurabh Deshmukh', qualifications: 'PT, BPTh', role: 'Orthopaedic Physiotherapist', initials: 'SD', color: 'terracotta' },
+  { name: 'Dr. Amruta Potdar', qualifications: 'PT, BPTh, M.Sc', role: 'Orthopaedic Physiotherapist', initials: 'AP', color: 'bark' },
+  { name: 'Dr. Pankaj Sharma', qualifications: 'MBBS, DNB', role: 'Orthopaedic Surgeon', initials: 'PS', color: 'sage' },
+  { name: 'Priyanka Kalbhor', qualifications: '', role: 'ANC PNC Coach & Lactation Consultant', initials: 'PK', color: 'terracotta' },
+  { name: 'Sayali Deshpande', qualifications: 'B.A Yoga Trainer', role: 'Yoga & Fitness Coach', initials: 'SD2', color: 'bark' },
+  { name: 'Dr. Neelam Vedpathak', qualifications: 'BAMS, MD', role: 'Panchakarma Specialist', initials: 'NV', color: 'sage' },
+  { name: 'Mr. Sumedh Joshi', qualifications: '', role: 'Fitness Coach', initials: 'SJ', color: 'terracotta' },
+  { name: 'Dr. Bharati Deokar-Sharma', qualifications: '', role: 'Orthopaedic Surgeon', initials: 'BD', color: 'bark' },
 ]
 
 export const SERVICES = [

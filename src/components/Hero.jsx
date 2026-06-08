@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
-import { CLINIC } from '../constants/data'
+import { CLINIC, TEAM } from '../constants/data'
 
 export default function Hero() {
   return (
@@ -70,21 +70,35 @@ export default function Hero() {
             <div className="relative w-full max-w-sm">
               {/* Main card */}
               <div className="bg-gradient-to-br from-sage-light/70 to-terracotta-light/60 rounded-3xl p-8 border border-border-warm shadow-2xl">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-36 h-36 rounded-full bg-white shadow-xl mb-5 p-3">
+                {/* Logo — rounded square to match logo shape */}
+                <div className="flex justify-center mb-5">
+                  <div className="w-36 h-36 rounded-2xl bg-white shadow-xl p-3 flex items-center justify-center">
                     <img src="/logo.png" alt="Aayurphysio" className="w-full h-full object-contain" />
                   </div>
-                  <h3 className="font-display text-2xl text-text-main font-semibold">Aayurphysio</h3>
-                  <p className="font-body text-sm text-text-muted mt-1">Wellness Centre, Nigdi</p>
                 </div>
 
+                <p className="font-body text-xs text-text-muted uppercase tracking-wider mb-3 text-center">Meet Our Specialists</p>
+
+                {/* Top 3 team members */}
                 <div className="space-y-3">
-                  {['PIVD & Spine Care', "Women's Wellness", 'Sports Rehab', 'Neuro Physiotherapy'].map(s => (
-                    <div key={s} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3">
-                      <span className="w-2.5 h-2.5 rounded-full bg-sage-dark flex-shrink-0" />
-                      <span className="font-body text-sm font-medium text-text-mid">{s}</span>
-                    </div>
-                  ))}
+                  {TEAM.slice(0, 3).map(member => {
+                    const avatarColors = {
+                      sage: 'bg-sage-light text-sage-dark',
+                      terracotta: 'bg-terracotta-light text-terracotta',
+                      bark: 'bg-bark-light/30 text-bark',
+                    }
+                    return (
+                      <div key={member.name} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3">
+                        <div className={`w-9 h-9 rounded-full flex items-center justify-center font-body font-bold text-xs flex-shrink-0 ${avatarColors[member.color]}`}>
+                          {member.initials.replace('2','')}
+                        </div>
+                        <div>
+                          <div className="font-body text-sm font-semibold text-text-main leading-tight">{member.name}</div>
+                          <div className="font-body text-xs text-text-muted">{member.role}</div>
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
 
