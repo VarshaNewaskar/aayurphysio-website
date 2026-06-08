@@ -16,7 +16,7 @@ export default function Testimonials() {
           <span className="inline-block px-3 py-1 rounded-full bg-terracotta-light text-terracotta text-xs font-body font-medium mb-4 uppercase tracking-wider">
             Patient Stories
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl text-text-main">What Our Patients Say</h2>
+          <h2 className="font-display text-5xl sm:text-6xl text-text-main font-semibold">What Our Patients Say</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

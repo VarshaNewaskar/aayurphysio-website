@@ -40,7 +40,7 @@ export default function BookAppointment() {
           <span className="inline-block px-3 py-1 rounded-full bg-sage-light/50 text-sage-dark text-xs font-body font-medium mb-4 uppercase tracking-wider">
             Book Now
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl text-text-main">Start Your Recovery Today</h2>
+          <h2 className="font-display text-5xl sm:text-6xl text-text-main font-semibold">Start Your Recovery Today</h2>
           <p className="mt-4 font-body text-text-muted max-w-md mx-auto text-base">
             Reach us on WhatsApp for a quick response, or fill the form and we'll call you back.
           </p>

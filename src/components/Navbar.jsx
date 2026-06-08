@@ -26,17 +26,17 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
+            <div className="flex items-center justify-between h-20">
               {/* Logo */}
               <a href="#hero" className="flex items-center gap-2">
-                <img src="/logo.png" alt="Aayurphysio Wellness Centre" className="h-10 w-auto object-contain" />
+                <img src="/logo.png" alt="Aayurphysio Wellness Centre" className="h-12 w-auto object-contain" />
               </a>
 
               {/* Desktop nav links */}
               <div className="hidden md:flex items-center gap-7">
                 {navLinks.map(link => (
                   <a key={link.label} href={link.href}
-                    className="font-body text-sm text-text-mid hover:text-sage-dark transition-colors duration-200">
+                    className="font-body text-base font-medium text-text-mid hover:text-sage-dark transition-colors duration-200">
                     {link.label}
                   </a>
                 ))}

@@ -29,7 +29,7 @@ export default function Contact() {
           <span className="inline-block px-3 py-1 rounded-full bg-sage-light/50 text-sage-dark text-xs font-body font-medium mb-4 uppercase tracking-wider">
             Find Us
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl text-text-main">Visit the Clinic</h2>
+          <h2 className="font-display text-5xl sm:text-6xl text-text-main font-semibold">Visit the Clinic</h2>
           <p className="mt-4 font-body text-text-muted max-w-sm mx-auto text-base">
             We're conveniently located near BHEL Chowk, Nigdi, Pune.
           </p>

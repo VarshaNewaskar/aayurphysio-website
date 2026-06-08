@@ -69,10 +69,10 @@ export default function About() {
             <span className="inline-block px-3 py-1 rounded-full bg-terracotta-light text-terracotta text-xs font-body font-medium mb-5 uppercase tracking-wider">
               About Us
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl text-text-main mb-6 leading-tight">
+            <h2 className="font-display text-5xl sm:text-6xl text-text-main font-semibold mb-6 leading-tight">
               Where Science Meets the Wisdom of Healing
             </h2>
-            <p className="font-body text-text-mid leading-relaxed mb-4">
+            <p className="font-body text-lg text-text-mid leading-relaxed mb-4">
               Aayurphysio Wellness Centre was founded with one mission — to bring truly holistic, evidence-based physiotherapy to PCMC. Located near BHEL Chowk, Nigdi, we are a team of passionate therapists who believe that recovery goes beyond the treatment table.
             </p>
             <p className="font-body text-text-mid leading-relaxed mb-8">

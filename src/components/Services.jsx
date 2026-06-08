@@ -32,8 +32,8 @@ export default function Services() {
           <span className="inline-block px-3 py-1 rounded-full bg-sage-light/50 text-sage-dark text-xs font-body font-medium mb-4 uppercase tracking-wider">
             What We Treat
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl text-text-main">Specialized Care for Every Body</h2>
-          <p className="mt-4 font-body text-text-muted max-w-xl mx-auto text-base">
+          <h2 className="font-display text-5xl sm:text-6xl text-text-main font-semibold">Specialized Care for Every Body</h2>
+          <p className="mt-5 font-body text-text-mid max-w-xl mx-auto text-lg">
             Evidence-based therapies tailored to your condition — because no two patients are alike.
           </p>
         </motion.div>
@@ -56,8 +56,8 @@ export default function Services() {
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${c.bg} mb-4`}>
                   <Icon size={22} className={c.icon} />
                 </div>
-                <h3 className="font-display text-lg text-text-main font-semibold mb-2">{service.name}</h3>
-                <p className="font-body text-sm text-text-muted leading-relaxed">{service.description}</p>
+                <h3 className="font-display text-xl text-text-main font-semibold mb-2">{service.name}</h3>
+                <p className="font-body text-sm text-text-mid leading-relaxed">{service.description}</p>
               </motion.div>
             )
           })}
