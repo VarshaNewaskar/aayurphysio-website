@@ -19,14 +19,14 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
           >
             {/* Tag pill */}
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta-light text-terracotta text-sm font-body font-semibold mb-7 shadow-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta-light text-terracotta text-sm font-body font-bold mb-7 shadow-sm uppercase tracking-wide">
               <span className="w-2 h-2 rounded-full bg-terracotta inline-block animate-pulse" />
               Holistic Wellness · PCMC, Nigdi
             </span>
 
-            <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl text-text-main leading-[1.05] mb-7 font-semibold">
-              Pain to{' '}
-              <em className="text-sage-dark" style={{ fontStyle: 'italic' }}>Power.</em>
+            <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-[1.05] mb-7 font-semibold">
+              <span className="gradient-heading">Pain to</span>{' '}
+              <em className="text-olive" style={{ fontStyle: 'italic' }}>Power.</em>
             </h1>
 
             <p className="font-body text-lg sm:text-xl text-text-mid leading-relaxed mb-10 max-w-lg">

@@ -7,9 +7,33 @@
     @apply font-body bg-warm-white text-text-main;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display text-text-main;
   }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-heading {
+    background: linear-gradient(135deg, #0F2D5E 0%, #1A4480 50%, #5C8A1E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-heading-light {
+    background: linear-gradient(135deg, #ffffff 0%, #D6EAA0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .section-divider::before {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 4px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #5C8A1E, #00B4C8);
   }
 }

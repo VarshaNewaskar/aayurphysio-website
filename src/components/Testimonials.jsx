@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Star, ExternalLink, Send, CheckCircle, MessageSquare, ThumbsUp, Loader2 } from 'lucide-react'
 import { TESTIMONIALS, CLINIC } from '../constants/data'
+import SectionLabel from './SectionLabel'
 
 function StarPicker({ value, onChange }) {
   const [hovered, setHovered] = useState(0)
@@ -85,8 +86,10 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="bg-cream py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="relative bg-cream overflow-hidden py-28">
+      <SectionLabel text="REVIEWS" color="text-terracotta/8" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
 
         {/* Header */}
         <motion.div
@@ -94,17 +97,19 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-terracotta-light text-terracotta text-xs font-body font-medium mb-4 uppercase tracking-wider">
+          <span className="inline-block px-3 py-1 rounded-full bg-terracotta-light text-terracotta text-xs font-body font-bold mb-5 uppercase tracking-widest">
             Patient Stories
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl text-text-main font-semibold mb-4">
+          <div className="section-divider" />
+          <h2 className="gradient-heading font-display text-5xl sm:text-6xl font-semibold mb-6 leading-tight">
             What Our Patients Say
           </h2>
 
-          {/* Google rating strip */}
-          <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-5 py-3 border border-border-warm shadow-sm mt-2">
+          {/* Google rating strip + Google Review CTA side by side */}
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-5 py-3 border border-border-warm shadow-sm">
             <img src="https://www.google.com/favicon.ico" alt="Google" className="w-5 h-5" />
             <div className="flex items-center gap-1.5">
               <span className="font-body font-bold text-text-main text-lg">{CLINIC.rating}</span>
@@ -124,6 +129,19 @@ export default function Testimonials() {
               className="flex items-center gap-1 font-body text-sm text-sage-dark font-medium hover:underline"
             >
               View on Google <ExternalLink size={13} />
+            </a>
+            </div>
+
+            {/* Prominent Google Review CTA button */}
+            <a
+              href={CLINIC.googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-sage-dark text-white font-body font-bold text-sm
+                hover:bg-bark transition-colors duration-200 shadow-md"
+            >
+              <img src="https://www.google.com/favicon.ico" alt="" className="w-4 h-4" />
+              Leave us a Google Review ↗
             </a>
           </div>
         </motion.div>
@@ -168,7 +186,7 @@ export default function Testimonials() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.1 }}
-                    className="bg-warm-white border border-border-warm rounded-2xl p-7 flex flex-col hover:shadow-lg transition-shadow duration-200"
+                    className="bg-white border-2 border-border-warm rounded-2xl p-7 flex flex-col hover:shadow-2xl hover:border-sage/40 transition-all duration-200"
                   >
                     {/* Quote + stars */}
                     <div className="flex items-start justify-between mb-3">

@@ -6,6 +6,7 @@ import Services from './components/Services'
 import About from './components/About'
 import BookAppointment from './components/BookAppointment'
 import Testimonials from './components/Testimonials'
+import InstagramFeed from './components/Instagram'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -26,6 +27,7 @@ export default function App() {
       <About />
       <BookAppointment />
       <Testimonials />
+      <InstagramFeed />
       <Contact />
       <Footer />
 
