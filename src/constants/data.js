@@ -1,6 +1,6 @@
 export const CLINIC = {
   name: 'Aayurphysio Wellness Centre',
-  tagline: 'Heal. Move. Thrive.',
+  tagline: 'Pain to Power.',
   description: "Pune's first holistic physiotherapy and wellness hub in PCMC — where evidence-based rehabilitation meets the healing wisdom of the body.",
   address: 'Plot No 606, Sector 25, Pradhikaran Nigdi, Near BHEL Chowk, Nigdi, Pune – 411044',
   phone: '+91 9168758245',
@@ -9,7 +9,7 @@ export const CLINIC = {
   hours: 'Mon–Sat: 9:00 am – 7:00 pm | Sunday: By Appointment Only',
   rating: '4.7',
   reviews: '22',
-  experience: '7+',
+  experience: '15+',
   mapsUrl: 'https://maps.google.com/?q=Aayurphysio+Wellness+Centre+Nigdi+Pune',
   googleReviewsUrl: 'https://share.google/nWrkgnVON68mZFTre',
   mapsEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.1243840261086!2d73.76835997465533!3d18.65841356495023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9fa90cc7d29%3A0xe396e4202e4a5c20!2sAayurphysio%20Wellness%20Centre(%20Ayurveda%2C%20physiotherapy%2Cnutrition%20and%20yoga))!5e0!3m2!1sen!2sin!4v1780769196280!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
@@ -28,98 +28,92 @@ export const TEAM = [
   { name: 'Dr. Bharati Deokar-Sharma', qualifications: '', role: 'Orthopaedic Surgeon', initials: 'BD', color: 'bark' },
 ]
 
-export const SERVICES = {
-  physiotherapy: [
-    {
-      id: 1,
-      name: 'Orthopaedic Physiotherapy',
-      description: 'Evidence-based treatment for joint, muscle and bone conditions — including knee, hip, shoulder and spine disorders. Our therapists use targeted manual therapy, exercise prescription and electrotherapy to restore strength and mobility without dependency on medication.',
-      icon: 'bone',
-      color: 'sage',
-    },
-    {
-      id: 2,
-      name: 'Sports Physiotherapy',
-      description: 'Targeted rehabilitation for sports-related injuries using biomechanical analysis, sport-specific conditioning and return-to-play protocols. Suitable for amateur fitness enthusiasts and competitive athletes alike.',
-      icon: 'activity',
-      color: 'terracotta',
-    },
-    {
-      id: 3,
-      name: 'Neuro Physiotherapy',
-      description: 'Specialised rehabilitation for stroke, Parkinson\'s disease, multiple sclerosis and spinal cord injuries. Focused on rebuilding movement patterns, improving balance and restoring daily independence through progressive therapy.',
-      icon: 'brain',
-      color: 'bark',
-    },
-    {
-      id: 4,
-      name: 'PIVD Treatment',
-      description: 'Comprehensive care for Prolapsed Intervertebral Disc causing back and neck pain. Combines spinal decompression, core stabilisation, postural correction and manual therapy to relieve nerve compression and prevent recurrence.',
-      icon: 'spine',
-      color: 'sage',
-    },
-    {
-      id: 5,
-      name: 'Vertigo Assessment & Treatment',
-      description: 'Specialised vestibular rehabilitation using BPPV repositioning manoeuvres (Epley, Semont) and balance retraining exercises. Effectively treats dizziness, positional vertigo and vestibular dysfunction — often resolving in just 1–3 sessions.',
-      icon: 'rotate',
-      color: 'terracotta',
-    },
-    {
-      id: 6,
-      name: 'Dry Needling & Manual Therapy',
-      description: 'Advanced hands-on techniques including dry needling for trigger point release, soft tissue mobilisation, joint manipulation and myofascial release. Provides rapid pain relief and restores full range of motion.',
-      icon: 'needle',
-      color: 'bark',
-    },
-  ],
-  wellness: [
-    {
-      id: 7,
-      name: 'Ayurveda Treatment',
-      description: 'Traditional Ayurvedic therapies including Panchakarma detox, Abhyanga (therapeutic massage), Shirodhara and herbal treatments. Guided by our Ayurveda physician to restore natural body balance, improve immunity and promote long-term holistic wellness.',
-      icon: 'leaf',
-      color: 'sage',
-    },
-    {
-      id: 8,
-      name: 'Nutrition Counselling',
-      description: 'Personalised dietary plans crafted for your unique health goals — weight management, sports performance, pregnancy nutrition, diabetes and lifestyle disorders. Backed by clinical assessment and evidence-based dietary science.',
-      icon: 'apple',
-      color: 'terracotta',
-    },
-    {
-      id: 9,
-      name: 'Yoga Therapy',
-      description: 'Therapeutic yoga tailored to your health condition — not a generic fitness class. Addresses chronic pain, stress, flexibility, respiratory conditions and mental wellness through carefully sequenced asanas, pranayama and relaxation techniques.',
-      icon: 'sun',
-      color: 'bark',
-    },
-    {
-      id: 10,
-      name: 'Strength & Conditioning',
-      description: 'Structured fitness programs designed by qualified coaches to build functional strength, correct muscular imbalances and prevent injuries. Suitable post-rehabilitation patients and those seeking guided performance training.',
-      icon: 'dumbbell',
-      color: 'sage',
-    },
-  ],
-  specialised: [
-    {
-      id: 11,
-      name: 'Antenatal & Postnatal Care',
-      description: 'Comprehensive physiotherapy and wellness support through every stage of pregnancy and postpartum recovery. Includes pelvic floor rehabilitation, diastasis recti management, posture correction, safe exercise guidance and lactation support.',
-      icon: 'heart',
-      color: 'terracotta',
-    },
-    {
-      id: 12,
-      name: 'Foot Scan Assessment & Treatment',
-      description: 'Advanced computerised gait and foot pressure analysis to identify flat feet, high arches, overpronation and biomechanical imbalances. Followed by custom orthotic prescription, targeted foot exercises and footwear guidance.',
-      icon: 'footprints',
-      color: 'bark',
-    },
-  ],
-}
+export const SERVICES = [
+  {
+    id: 1,
+    name: 'Orthopaedic Physiotherapy',
+    description: 'Evidence-based treatment for joint, muscle and bone conditions — including knee, hip, shoulder and spine disorders. Our therapists use targeted manual therapy, exercise prescription and electrotherapy to restore strength and mobility without dependency on medication.',
+    icon: 'bone',
+    color: 'sage',
+  },
+  {
+    id: 2,
+    name: 'Sports Physiotherapy',
+    description: 'Targeted rehabilitation for sports-related injuries using biomechanical analysis, sport-specific conditioning and return-to-play protocols. Suitable for amateur fitness enthusiasts and competitive athletes alike.',
+    icon: 'activity',
+    color: 'terracotta',
+  },
+  {
+    id: 3,
+    name: 'Neuro Physiotherapy',
+    description: "Specialised rehabilitation for stroke, Parkinson's disease, multiple sclerosis and spinal cord injuries. Focused on rebuilding movement patterns, improving balance and restoring daily independence through progressive therapy.",
+    icon: 'brain',
+    color: 'bark',
+  },
+  {
+    id: 4,
+    name: 'PIVD Treatment',
+    description: 'Comprehensive care for Prolapsed Intervertebral Disc causing back and neck pain. Combines spinal decompression, core stabilisation, postural correction and manual therapy to relieve nerve compression and prevent recurrence.',
+    icon: 'spine',
+    color: 'sage',
+  },
+  {
+    id: 5,
+    name: 'Vertigo Assessment & Treatment',
+    description: 'Specialised vestibular rehabilitation using BPPV repositioning manoeuvres (Epley, Semont) and balance retraining exercises. Effectively treats dizziness, positional vertigo and vestibular dysfunction — often resolving in just 1–3 sessions.',
+    icon: 'rotate',
+    color: 'terracotta',
+  },
+  {
+    id: 6,
+    name: 'Dry Needling & Manual Therapy',
+    description: 'Advanced hands-on techniques including dry needling for trigger point release, soft tissue mobilisation, joint manipulation and myofascial release. Provides rapid pain relief and restores full range of motion.',
+    icon: 'needle',
+    color: 'bark',
+  },
+  {
+    id: 7,
+    name: 'Ayurveda & Panchakarma',
+    description: 'Authentic Ayurvedic consultations and classical therapies designed to restore balance, promote natural healing, and enhance overall well-being. By combining traditional Ayurvedic wisdom with a personalised approach, we provide effective solutions for lifestyle disorders, pain management, detoxification, stress relief, women\'s health, and preventive healthcare — helping you achieve lasting health and vitality naturally.',
+    icon: 'leaf',
+    color: 'sage',
+  },
+  {
+    id: 8,
+    name: 'Sports Nutrition',
+    description: 'Personalised, science-based nutritional guidance to support athletic performance, recovery, body composition, and overall health. Whether you are a professional athlete, fitness enthusiast, or recreational sportsperson, our customised nutrition plans help optimise energy levels, enhance endurance and strength, accelerate recovery, prevent injuries, and achieve your fitness goals through sustainable and practical dietary strategies.',
+    icon: 'apple',
+    color: 'terracotta',
+  },
+  {
+    id: 9,
+    name: 'Yoga Therapy',
+    description: 'Therapeutic yoga tailored to your health condition — not a generic fitness class. Addresses chronic pain, stress, flexibility, respiratory conditions and mental wellness through carefully sequenced asanas, pranayama and relaxation techniques.',
+    icon: 'sun',
+    color: 'bark',
+  },
+  {
+    id: 10,
+    name: 'Strength & Conditioning',
+    description: 'Structured, evidence-based training programs designed to improve strength, endurance, mobility, power, and overall physical performance. Through personalised assessment and goal-oriented exercise planning, we help athletes, fitness enthusiasts, and individuals of all ages enhance functional movement, prevent injuries, optimise performance, and build long-term physical resilience for a healthier and more active lifestyle.',
+    icon: 'dumbbell',
+    color: 'sage',
+  },
+  {
+    id: 11,
+    name: 'Antenatal & Postnatal Care',
+    description: 'Comprehensive physiotherapy and wellness support through every stage of pregnancy and postpartum recovery. Includes pelvic floor rehabilitation, diastasis recti management, posture correction, safe exercise guidance and lactation support.',
+    icon: 'heart',
+    color: 'terracotta',
+  },
+  {
+    id: 12,
+    name: 'Foot Scan Assessment & Treatment',
+    description: 'Advanced computerised gait and foot pressure analysis to identify flat feet, high arches, overpronation and biomechanical imbalances. Followed by custom orthotic prescription, targeted foot exercises and footwear guidance.',
+    icon: 'footprints',
+    color: 'bark',
+  },
+]
 
 export const TESTIMONIALS = [
   {

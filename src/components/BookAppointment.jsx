@@ -125,7 +125,7 @@ export default function BookAppointment() {
                 className="w-full px-4 py-3 rounded-xl border border-border-warm bg-white font-body text-sm text-text-main focus:outline-none focus:border-sage transition-colors"
               >
                 <option value="">Select Service (optional)</option>
-                {[...SERVICES.physiotherapy, ...SERVICES.wellness, ...SERVICES.specialised].map(s => (
+                {SERVICES.map(s => (
                 <option key={s.id} value={s.name}>{s.name}</option>
               ))}
               </select>
