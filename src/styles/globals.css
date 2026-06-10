@@ -36,4 +36,13 @@
     margin-bottom: 16px;
     background: linear-gradient(90deg, #5C8A1E, #00B4C8);
   }
+  .section-divider-light::before {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 4px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #D6EAA0, #B8EEF4);
+  }
 }

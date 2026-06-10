@@ -104,7 +104,7 @@ export default function About() {
             <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-bark-light text-xs font-body font-bold mb-5 uppercase tracking-widest">
               The Team
             </span>
-            <div className="section-divider" />
+            <div className="section-divider-light" />
             <h2 className="gradient-heading-light font-display text-5xl sm:text-6xl font-semibold leading-tight">
               Meet Our Specialists
             </h2>
@@ -121,7 +121,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-                className="flex items-start gap-4 bg-white/8 backdrop-blur-sm rounded-2xl border border-white/15
+                className="flex items-start gap-4 bg-white/[0.08] backdrop-blur-sm rounded-2xl border border-white/15
                   px-5 py-4 hover:bg-white/15 hover:border-white/30 transition-all duration-200 group"
               >
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center font-body font-black text-sm flex-shrink-0 ${avatarColor[member.color]}`}>

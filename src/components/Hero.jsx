@@ -79,29 +79,37 @@ export default function Hero() {
                 <h3 className="font-display text-2xl text-text-main font-semibold text-center mb-1">Aayurphysio</h3>
                 <p className="font-body text-sm text-text-muted text-center mb-5">Wellness Centre, Nigdi</p>
 
-                <div className="space-y-3">
-                  {['PIVD & Spine Care', "Women's Wellness", 'Sports Rehab', 'Neuro Physiotherapy'].map(s => (
-                    <div key={s} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3">
-                      <span className="w-2.5 h-2.5 rounded-full bg-sage-dark flex-shrink-0" />
+                <div className="space-y-2.5">
+                  {["Women's Wellness", 'Sports Physiotherapy', 'Neuro Physiotherapy', 'Ayurveda & Panchakarma'].map(s => (
+                    <div key={s} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-2.5">
+                      <span className="w-2 h-2 rounded-full bg-sage-dark flex-shrink-0" />
                       <span className="font-body text-sm font-medium text-text-mid">{s}</span>
                     </div>
                   ))}
                 </div>
-              </div>
 
-              {/* Floating badge — rating */}
-              <div className="absolute -top-5 -right-5 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border-warm">
-                <div className="flex items-center gap-1.5">
-                  <Star size={18} className="fill-gold text-gold" />
-                  <span className="font-display font-semibold text-xl text-text-main">{CLINIC.rating}</span>
+                {/* Badges inside card bottom row — no overflow */}
+                <div className="flex items-center justify-between mt-5 pt-4 border-t border-border-warm/60">
+                  <div className="flex items-center gap-1.5">
+                    <Star size={15} className="fill-gold text-gold" />
+                    <span className="font-body font-bold text-sm text-text-main">{CLINIC.rating}</span>
+                    <span className="font-body text-xs text-text-muted">rating</span>
+                  </div>
+                  <div className="h-4 w-px bg-border-warm" />
+                  <div className="text-right">
+                    <span className="font-display font-bold text-xl text-sage-dark">{CLINIC.experience}</span>
+                    <span className="font-body text-xs text-text-muted ml-1">yrs exp</span>
+                  </div>
                 </div>
-                <p className="font-body text-xs text-text-muted mt-0.5">Patient Rating</p>
               </div>
 
-              {/* Floating badge — experience */}
-              <div className="absolute -bottom-5 -left-5 bg-sage-dark rounded-2xl shadow-xl px-5 py-4">
-                <span className="font-display font-semibold text-3xl text-white">{CLINIC.experience}</span>
-                <p className="font-body text-xs text-sage-light mt-0.5">Years Experience</p>
+              {/* Single floating badge — top right only */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl px-3 py-2.5 border border-border-warm">
+                <div className="flex items-center gap-1">
+                  <Star size={14} className="fill-gold text-gold" />
+                  <span className="font-body font-bold text-sm text-text-main">Top Rated</span>
+                </div>
+                <p className="font-body text-[10px] text-text-muted">Nigdi, PCMC</p>
               </div>
             </div>
           </motion.div>

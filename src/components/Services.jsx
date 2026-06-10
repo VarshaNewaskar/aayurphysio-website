@@ -14,9 +14,9 @@ const iconMap = {
 }
 
 const colorMap = {
-  sage:       { bg: 'bg-sage-light/70',        icon: 'text-olive',      border: 'hover:border-olive',      num: 'text-olive' },
-  terracotta: { bg: 'bg-terracotta-light/70',  icon: 'text-terracotta', border: 'hover:border-terracotta', num: 'text-terracotta' },
-  bark:       { bg: 'bg-bark-light/25',        icon: 'text-bark',       border: 'hover:border-bark',       num: 'text-bark' },
+  sage:       { bg: 'bg-sage-light/70',        icon: 'text-olive',      border: 'hover:border-olive'      },
+  terracotta: { bg: 'bg-terracotta-light/70',  icon: 'text-terracotta', border: 'hover:border-terracotta' },
+  bark:       { bg: 'bg-bark-light/25',        icon: 'text-bark',       border: 'hover:border-bark'       },
 }
 
 export default function Services() {
@@ -58,13 +58,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
-                className={`group relative bg-white rounded-2xl border-2 border-transparent ${c.border}
-                  p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl cursor-default overflow-hidden`}
+                className={`group bg-white rounded-2xl border-2 border-transparent ${c.border}
+                  p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl cursor-default`}
               >
-                {/* Card number watermark */}
-                <span className={`absolute top-3 right-4 font-body font-black text-5xl ${c.num}/10 select-none`}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${c.bg} mb-4
                   transition-transform duration-200 group-hover:scale-110`}>
                   <Icon size={22} className={c.icon} />

@@ -44,7 +44,7 @@ export default function InstagramFeed() {
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-bark-light text-xs font-body font-bold mb-5 uppercase tracking-widest">
               <Instagram size={13} /> Follow Us
             </span>
-            <div className="section-divider" />
+            <div className="section-divider-light" />
             <h2 className="gradient-heading-light font-display text-5xl sm:text-6xl font-semibold leading-tight">
               Life at Aayurphysio
             </h2>
@@ -99,7 +99,7 @@ export default function InstagramFeed() {
                   { step: '02', text: 'Create an "Instagram Feed" widget and connect @aayurphysiowellness' },
                   { step: '03', text: 'Copy your App ID and paste it into Instagram.jsx → ELFSIGHT_APP_ID' },
                 ].map(s => (
-                  <div key={s.step} className="bg-white/8 rounded-2xl p-5 border border-white/15 text-left">
+                  <div key={s.step} className="bg-white/[0.08] rounded-2xl p-5 border border-white/15 text-left">
                     <div className="font-body font-black text-3xl text-white/20 mb-2">{s.step}</div>
                     <div className="font-body text-xs text-bark-light/70 leading-relaxed">{s.text}</div>
                   </div>

@@ -51,25 +51,11 @@ export const SERVICES = [
     color: 'bark',
   },
   {
-    id: 4,
-    name: 'PIVD Treatment',
-    description: 'Comprehensive care for Prolapsed Intervertebral Disc causing back and neck pain. Combines spinal decompression, core stabilisation, postural correction and manual therapy to relieve nerve compression and prevent recurrence.',
-    icon: 'spine',
-    color: 'sage',
-  },
-  {
     id: 5,
     name: 'Vertigo Assessment & Treatment',
     description: 'Specialised vestibular rehabilitation using BPPV repositioning manoeuvres (Epley, Semont) and balance retraining exercises. Effectively treats dizziness, positional vertigo and vestibular dysfunction — often resolving in just 1–3 sessions.',
     icon: 'rotate',
     color: 'terracotta',
-  },
-  {
-    id: 6,
-    name: 'Dry Needling & Manual Therapy',
-    description: 'Advanced hands-on techniques including dry needling for trigger point release, soft tissue mobilisation, joint manipulation and myofascial release. Provides rapid pain relief and restores full range of motion.',
-    icon: 'needle',
-    color: 'bark',
   },
   {
     id: 7,
