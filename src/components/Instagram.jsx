@@ -10,7 +10,7 @@ import SectionLabel from './SectionLabel'
 // 4. Publish → copy the App ID (looks like: eae12345-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
 // 5. Paste it below replacing YOUR_ELFSIGHT_APP_ID
 // ─────────────────────────────────────────────────────────────────────────────
-const ELFSIGHT_APP_ID = '743ae071-6729-4b8b-bcb8-49dd6af9a60a'   // ← paste your Elfsight App ID here
+const ELFSIGHT_APP_ID = 'aaf636ea-1566-42da-be20-8db4528eff0a'   // ← paste your Elfsight App ID here
 
 const INSTAGRAM_HANDLE = '@aayurphysiowellness'
 const INSTAGRAM_URL    = 'https://www.instagram.com/aayurphysiowellness/'
