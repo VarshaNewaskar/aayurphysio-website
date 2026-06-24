@@ -142,7 +142,7 @@ export const BRANCHES = [
     days: 'Mon – Sat',
     phones: ['7798731833', '7276042117'],
     color: 'bark',
-    mapsUrl: 'https://maps.google.com/?q=Pramod+Apartments+72A+Kasturba+Housing+Society+Vishrantwadi+Pune+411015',
+    mapsUrl: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.051287527083!2d73.8778055746534!3d18.571726367610733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1003e63627f%3A0x386cd5bfa5d9668c!2sAayurphysio%20Wellness%20Centre-%20Vishrantwadi!5e0!3m2!1sen!2sin!4v1782295635531!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>',
   },
   {
     id: 4,
