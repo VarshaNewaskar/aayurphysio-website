@@ -114,7 +114,7 @@ export const BRANCHES = [
     days: 'Mon – Sat',
     phones: ['76669 26099'],
     color: 'sage',
-    mapsUrl: 'https://maps.google.com/?q=Plot+606+Sector+25+Pradhikaran+Nigdi+Pune+411044',
+    mapsUrl: 'https://maps.app.goo.gl/bKdLd1qVyEvb5ccG9',
   },
   {
     id: 2,
@@ -128,7 +128,7 @@ export const BRANCHES = [
     days: 'Mon – Sat',
     phones: ['+91 98348 50379'],
     color: 'terracotta',
-    mapsUrl: 'https://maps.google.com/?q=RL+143+Pu+La+Deshpande+Marg+Shahu+Nagar+MIDC+Chinchwad+Pune+411019',
+    mapsUrl: 'https://maps.app.goo.gl/A4bRG8Kru7zyJHR29',
   },
   {
     id: 3,
