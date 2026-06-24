@@ -13,7 +13,7 @@ const highlights = [
   'Evidence-based protocols for every condition',
   `Rated ${CLINIC.rating}★ by ${CLINIC.reviews}+ satisfied patients`,
   'Holistic approach — Physio, Ayurveda, Nutrition & Yoga',
-  'First-of-its-kind multi-specialty wellness hub in PCMC',
+  'First-of-its-kind multi-specialty wellness hub in Pune',
 ]
 
 export default function About() {
@@ -50,7 +50,7 @@ export default function About() {
                   <img src="/logo.png" alt="Aayurphysio" className="w-12 h-12 object-contain rounded-xl bg-white p-1" />
                   <div>
                     <div className="font-body font-bold text-white text-sm">Aayurphysio Wellness Centre</div>
-                    <div className="font-body text-xs text-bark-light/70">PCMC's first multi-specialty wellness hub</div>
+                    <div className="font-body text-xs text-bark-light/70">Pune's first multi-specialty wellness hub</div>
                   </div>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function About() {
                 Where Science Meets the Wisdom of Healing
               </h2>
               <p className="font-body text-base text-text-mid leading-relaxed mb-4">
-                Aayurphysio Wellness Centre was founded with one mission — to bring truly holistic, evidence-based care to PCMC. Located near BHEL Chowk, Nigdi, our multi-specialty team believes recovery goes far beyond the treatment table.
+                Aayurphysio Wellness Centre was founded with one mission — to bring truly holistic, evidence-based care. Located in Pune, our multi-specialty team believes recovery goes far beyond the treatment table.
               </p>
               <p className="font-body text-base text-text-mid leading-relaxed mb-8">
                 From neurological rehab to pregnancy wellness and elite sports recovery, we ensure every patient leaves with a plan — not just a prescription.
