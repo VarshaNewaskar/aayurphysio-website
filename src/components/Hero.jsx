@@ -5,18 +5,6 @@ import { CLINIC } from '../constants/data'
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen bg-warm-white flex items-center overflow-hidden pt-24">
-      {/* Background clinical image — fades out on the left so text stays readable */}
-      <img
-        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
-        style={{ opacity: 0.13 }}
-      />
-      {/* Gradient overlay: solid cream on the left (text area) → transparent on the right */}
-      <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'linear-gradient(to right, #FFFCF8 38%, #FFFCF8cc 55%, transparent 100%)' }} />
-
       {/* Decorative blobs */}
       <div className="absolute top-10 right-0 w-96 h-96 rounded-full bg-sage-light/50 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-72 h-72 rounded-full bg-terracotta-light/60 blur-3xl pointer-events-none" />
