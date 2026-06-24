@@ -142,7 +142,7 @@ export const BRANCHES = [
     days: 'Mon – Sat',
     phones: ['7798731833', '7276042117'],
     color: 'bark',
-    mapsUrl: 'https://www.google.com/maps/place/Aayurphysio+Wellness+Centre-+Vishrantwadi/@18.5717264,73.8778056,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2c1003e63627f:0x386cd5bfa5d9668c!8m2!3d18.5717213!4d73.8803805!16s%2Fg%2F11m76463n0?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D',
+    mapsUrl: 'https://maps.app.goo.gl/2p9ikUkB1VPA5YFU8',
   },
   {
     id: 4,
