@@ -101,6 +101,65 @@ export const SERVICES = [
   },
 ]
 
+export const BRANCHES = [
+  {
+    id: 1,
+    name: 'Nigdi – Pradhikaran',
+    tag: 'Main Branch',
+    address: 'Plot No 606, Sector 25, Near Kachghar Chowk, Pradhikaran, Nigdi, Pune – 411044',
+    timings: [
+      { label: 'Morning', time: '8:30 am – 2:00 pm' },
+      { label: 'Evening', time: '5:00 pm – 9:00 pm' },
+    ],
+    days: 'Mon – Sat',
+    phones: ['76669 26099'],
+    color: 'sage',
+    mapsUrl: 'https://maps.google.com/?q=Plot+606+Sector+25+Pradhikaran+Nigdi+Pune+411044',
+  },
+  {
+    id: 2,
+    name: 'Chinchwad – MIDC',
+    tag: 'Branch',
+    address: 'RL 143, Pu. La Deshpande Marg, Infront of Ashtvinayak Ganapati Mandir, Shahu Nagar, MIDC, Chinchwad, Pune – 411019',
+    timings: [
+      { label: 'Morning', time: '10:00 am – 1:00 pm' },
+      { label: 'Evening', time: '6:00 pm – 8:30 pm' },
+    ],
+    days: 'Mon – Sat',
+    phones: ['+91 98348 50379'],
+    color: 'terracotta',
+    mapsUrl: 'https://maps.google.com/?q=RL+143+Pu+La+Deshpande+Marg+Shahu+Nagar+MIDC+Chinchwad+Pune+411019',
+  },
+  {
+    id: 3,
+    name: 'Vishrantwadi',
+    tag: 'Branch',
+    address: 'Pramod Apartments, 72A, Kasturba Housing Society, Vishrantwadi, Pune – 411015',
+    timings: [
+      { label: 'Morning', time: '9:30 am – 1:30 pm' },
+      { label: 'Evening', time: '6:00 pm – 9:00 pm' },
+    ],
+    days: 'Mon – Sat',
+    phones: ['7798731833', '7276042117'],
+    color: 'bark',
+    mapsUrl: 'https://maps.google.com/?q=Pramod+Apartments+72A+Kasturba+Housing+Society+Vishrantwadi+Pune+411015',
+  },
+  {
+    id: 4,
+    name: 'Ravet',
+    tag: 'Branch',
+    address: 'Sr No 184 B/2, 2nd Floor, Behind Madhav Mithas, Shinde Vasti Chowk, Shinde Vasti, Ravet, Pune – 412101',
+    timings: [
+      { label: 'Morning', time: '10:00 am – 2:00 pm' },
+      { label: 'Evening', time: '5:00 pm – 8:30 pm' },
+    ],
+    days: 'Mon – Sat',
+    phones: ['9270582552'],
+    color: 'sage',
+    mapsUrl: 'https://maps.google.com/?q=Sr+No+184+B2+Shinde+Vasti+Chowk+Ravet+Pune+412101',
+  },
+]
+
 export const TESTIMONIALS = [
   {
     text: 'Suffered from severe back pain for two years. After just 6 sessions at Aayurphysio, I can finally sit through a full workday without discomfort. The doctors explain everything so patiently.',

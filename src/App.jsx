@@ -7,7 +7,7 @@ import About from './components/About'
 import BookAppointment from './components/BookAppointment'
 import Testimonials from './components/Testimonials'
 import InstagramFeed from './components/Instagram'
-import Contact from './components/Contact'
+import Branches from './components/Branches'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -28,7 +28,7 @@ export default function App() {
       <BookAppointment />
       <Testimonials />
       <InstagramFeed />
-      <Contact />
+      <Branches />
       <Footer />
 
       {/* Scroll to top */}
