@@ -114,7 +114,7 @@ export const BRANCHES = [
     days: 'Mon – Sat',
     phones: ['76669 26099'],
     color: 'sage',
-    mapsUrl: 'https://maps.app.goo.gl/bKdLd1qVyEvb5ccG9',
+    mapsUrl: 'https://maps.app.goo.gl/7Gt9vg9gEsycqJxj9',
   },
   {
     id: 2,
