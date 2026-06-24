@@ -1,10 +1,10 @@
 export const CLINIC = {
   name: 'Aayurphysio Wellness Centre',
   tagline: 'Pain to Power.',
-  description: "Pune's first holistic physiotherapy and wellness hub in PCMC — where evidence-based rehabilitation meets the healing wisdom of the body.",
+  description: "Pune's first holistic physiotherapy and wellness hub — where evidence-based rehabilitation meets the healing wisdom of the body.",
   address: 'Plot No 606, Sector 25, Pradhikaran Nigdi, Near BHEL Chowk, Nigdi, Pune – 411044',
-  phone: '+91 9168758245',
-  whatsapp: '+91 9168758245',
+  phone: '+91 76669 26099',
+  whatsapp: '+91 76669 26099',
   email: 'aayurphysio@gmail.com',
   hours: 'Mon–Sat: 9:00 am – 7:00 pm | Sunday: By Appointment Only',
   rating: '4.7',

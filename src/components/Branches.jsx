@@ -1,26 +1,41 @@
 import { motion } from 'framer-motion'
-import { Phone, MessageCircle, MapPin, CalendarCheck, Clock, Star } from 'lucide-react'
+import { Phone, MessageCircle, MapPin, CalendarCheck, Clock, MapPinned } from 'lucide-react'
 import { BRANCHES } from '../constants/data'
 import SectionLabel from './SectionLabel'
 
 const colorMap = {
   sage: {
-    badge: 'bg-sage-light text-olive',
-    icon: 'text-olive',
-    border: 'hover:border-sage/50',
+    header: 'bg-gradient-to-br from-sage-dark to-olive',
+    badge: 'bg-white/20 text-white',
+    icon: 'text-sage-dark',
+    iconBg: 'bg-sage-light/60',
+    border: 'border-sage/20 hover:border-sage/50',
     dot: 'bg-sage',
+    timingBg: 'bg-sage-light/40',
+    callBtn: 'bg-sage-dark hover:bg-olive text-white',
+    dirBtn: 'border-sage/40 text-sage-dark hover:bg-sage-light/50 hover:border-sage',
   },
   terracotta: {
-    badge: 'bg-terracotta-light text-terracotta',
+    header: 'bg-gradient-to-br from-terracotta to-cyan',
+    badge: 'bg-white/20 text-white',
     icon: 'text-terracotta',
-    border: 'hover:border-terracotta/50',
+    iconBg: 'bg-terracotta-light/60',
+    border: 'border-terracotta/20 hover:border-terracotta/50',
     dot: 'bg-terracotta',
+    timingBg: 'bg-terracotta-light/40',
+    callBtn: 'bg-terracotta hover:bg-cyan text-white',
+    dirBtn: 'border-terracotta/40 text-terracotta hover:bg-terracotta-light/50 hover:border-terracotta',
   },
   bark: {
-    badge: 'bg-bark-light/30 text-bark',
+    header: 'bg-gradient-to-br from-bark to-bark-light',
+    badge: 'bg-white/20 text-white',
     icon: 'text-bark',
-    border: 'hover:border-bark/50',
+    iconBg: 'bg-bark-light/30',
+    border: 'border-bark/20 hover:border-bark/50',
     dot: 'bg-bark',
+    timingBg: 'bg-bark-light/20',
+    callBtn: 'bg-bark hover:bg-bark-light text-white hover:text-bark',
+    dirBtn: 'border-bark/40 text-bark hover:bg-bark-light/20 hover:border-bark',
   },
 }
 
@@ -39,7 +54,7 @@ function whatsappUrl(phone, branch) {
 export default function Branches() {
   return (
     <section id="contact" className="relative bg-section-blue overflow-hidden py-28">
-      <SectionLabel text="FIND US" color="text-sage-dark/6" />
+      <SectionLabel text="FIND US" color="text-sage-dark/[0.06]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
 
@@ -72,32 +87,30 @@ export default function Branches() {
             return (
               <motion.div
                 key={branch.id}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className={`relative flex flex-col rounded-3xl bg-white border border-border-warm shadow-sm
-                  ${c.border} hover:shadow-lg transition-all duration-300`}
+                transition={{ duration: 0.5, delay: i * 0.09 }}
+                className={`flex flex-col rounded-3xl bg-white border shadow-sm overflow-hidden
+                  ${c.border} hover:shadow-xl transition-all duration-300 group`}
               >
-                {/* Card top accent bar */}
-                <div className={`absolute top-0 left-6 right-6 h-[3px] rounded-b-full ${c.dot} opacity-60`} />
-
-                <div className="p-7 flex flex-col gap-5 flex-1">
-
-                  {/* Branch name + tag */}
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-body font-bold uppercase tracking-widest mb-2 ${c.badge}`}>
-                        {branch.tag}
-                      </span>
-                      <h3 className="font-display text-2xl font-semibold text-text-main leading-snug">
-                        {branch.name}
-                      </h3>
-                    </div>
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-cream ${c.icon}`}>
-                      <MapPin size={18} />
-                    </div>
+                {/* Coloured header band */}
+                <div className={`${c.header} px-6 py-5 flex items-start justify-between`}>
+                  <div>
+                    <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-body font-bold uppercase tracking-widest mb-1.5 ${c.badge}`}>
+                      {branch.tag}
+                    </span>
+                    <h3 className="font-display text-2xl font-semibold text-white leading-snug">
+                      {branch.name}
+                    </h3>
                   </div>
+                  <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
+                    <MapPinned size={18} className="text-white" />
+                  </div>
+                </div>
+
+                {/* Card body */}
+                <div className="p-6 flex flex-col gap-4 flex-1">
 
                   {/* Address */}
                   <div className="flex items-start gap-2.5">
@@ -105,26 +118,29 @@ export default function Branches() {
                     <p className="font-body text-sm text-text-mid leading-relaxed">{branch.address}</p>
                   </div>
 
-                  {/* Timings */}
+                  {/* Timings — pill chips */}
                   <div className="flex items-start gap-2.5">
                     <Clock size={14} className={`mt-0.5 flex-shrink-0 ${c.icon}`} />
-                    <div className="flex flex-col gap-0.5">
+                    <div className="flex flex-wrap gap-2">
                       {branch.timings.map(t => (
-                        <p key={t.label} className="font-body text-sm text-text-mid">
-                          <span className="font-semibold text-text-main">{t.label}:</span>{' '}{t.time}
-                        </p>
+                        <span key={t.label} className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-body font-medium text-text-mid ${c.timingBg}`}>
+                          <span className="font-semibold text-text-main">{t.label}</span>
+                          {t.time}
+                        </span>
                       ))}
-                      <p className="font-body text-xs text-text-muted mt-0.5">{branch.days}</p>
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-body text-text-muted bg-cream">
+                        {branch.days}
+                      </span>
                     </div>
                   </div>
 
                   {/* Phone number(s) */}
-                  <div className="flex items-start gap-2.5">
-                    <Phone size={14} className={`mt-0.5 flex-shrink-0 ${c.icon}`} />
+                  <div className="flex items-center gap-2.5">
+                    <Phone size={14} className={`flex-shrink-0 ${c.icon}`} />
                     <div className="flex flex-wrap gap-x-4 gap-y-0.5">
                       {branch.phones.map(ph => (
                         <a key={ph} href={`tel:${cleanPhone(ph)}`}
-                          className="font-body text-sm font-semibold text-text-main hover:underline">
+                          className="font-body text-sm font-semibold text-text-main hover:underline underline-offset-2">
                           {ph}
                         </a>
                       ))}
@@ -132,12 +148,11 @@ export default function Branches() {
                   </div>
 
                   {/* Action buttons */}
-                  <div className="grid grid-cols-2 gap-2.5 mt-auto pt-2">
+                  <div className="grid grid-cols-2 gap-2.5 mt-auto pt-2 border-t border-border-warm">
                     <a
                       href={`tel:${cleanPhone(primaryPhone)}`}
-                      className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl
-                        bg-sage-dark text-white font-body font-semibold text-sm
-                        hover:bg-sage transition-colors duration-200"
+                      className={`flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl
+                        font-body font-semibold text-sm transition-colors duration-200 ${c.callBtn}`}
                     >
                       <Phone size={14} /> Call
                     </a>
@@ -157,9 +172,8 @@ export default function Branches() {
                       href={branch.mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl
-                        border-2 border-bark/30 text-bark font-body font-semibold text-sm
-                        hover:bg-bark/10 hover:border-bark/60 transition-colors duration-200"
+                      className={`flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl
+                        border-2 font-body font-semibold text-sm transition-colors duration-200 ${c.dirBtn}`}
                     >
                       <MapPin size={14} /> Directions
                     </a>
@@ -167,8 +181,8 @@ export default function Branches() {
                     <a
                       href="#book"
                       className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl
-                        border-2 border-sage/40 text-sage-dark font-body font-semibold text-sm
-                        hover:bg-sage/10 hover:border-sage transition-colors duration-200"
+                        border-2 border-sage-dark/30 text-sage-dark font-body font-semibold text-sm
+                        hover:bg-sage-light/40 hover:border-sage-dark transition-colors duration-200"
                     >
                       <CalendarCheck size={14} /> Book
                     </a>

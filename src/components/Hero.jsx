@@ -21,7 +21,7 @@ export default function Hero() {
             {/* Tag pill */}
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta-light text-terracotta text-sm font-body font-bold mb-7 shadow-sm uppercase tracking-wide">
               <span className="w-2 h-2 rounded-full bg-terracotta inline-block animate-pulse" />
-              Holistic Wellness · PCMC, Nigdi
+              Holistic Wellness · Pune
             </span>
 
             <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-[1.05] mb-7 font-semibold">
@@ -77,7 +77,7 @@ export default function Hero() {
                   </div>
                 </div>
                 <h3 className="font-display text-2xl text-text-main font-semibold text-center mb-1">Aayurphysio</h3>
-                <p className="font-body text-sm text-text-muted text-center mb-5">Wellness Centre, Nigdi</p>
+                <p className="font-body text-sm text-text-muted text-center mb-5">4 Locations across Pune</p>
 
                 <div className="space-y-2.5">
                   {["Women's Wellness", 'Sports Physiotherapy', 'Neuro Physiotherapy', 'Ayurveda & Panchakarma'].map(s => (
@@ -109,7 +109,7 @@ export default function Hero() {
                   <Star size={14} className="fill-gold text-gold" />
                   <span className="font-body font-bold text-sm text-text-main">Top Rated</span>
                 </div>
-                <p className="font-body text-[10px] text-text-muted">Nigdi, PCMC</p>
+                <p className="font-body text-[10px] text-text-muted">4 Locations · Pune</p>
               </div>
             </div>
           </motion.div>
