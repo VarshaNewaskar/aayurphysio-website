@@ -54,6 +54,15 @@ function whatsappUrl(phone, branch) {
 export default function Branches() {
   return (
     <section id="contact" className="relative bg-section-blue overflow-hidden py-28">
+      {/* Subtle city/aerial background image */}
+      <img
+        src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=80"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+        style={{ opacity: 0.07 }}
+      />
+
       <SectionLabel text="FIND US" color="text-sage-dark/[0.06]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
