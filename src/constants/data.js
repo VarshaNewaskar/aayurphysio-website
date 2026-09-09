@@ -30,10 +30,10 @@ export const TEAM = [
 
 export const SERVICES = [
   {
-    id: 1,
-    name: 'Orthopaedic Physiotherapy',
-    description: 'Evidence-based treatment for joint, muscle and bone conditions — including knee, hip, shoulder and spine disorders. Our therapists use targeted manual therapy, exercise prescription and electrotherapy to restore strength and mobility without dependency on medication.',
-    icon: 'bone',
+    id: 7,
+    name: 'Ayurveda & Panchakarma',
+    description: 'Authentic Ayurvedic consultations and classical therapies designed to restore balance, promote natural healing, and enhance overall well-being. By combining traditional Ayurvedic wisdom with a personalised approach, we provide effective solutions for lifestyle disorders, pain management, detoxification, stress relief, women\'s health, and preventive healthcare — helping you achieve lasting health and vitality naturally.',
+    icon: 'leaf',
     color: 'sage',
   },
   {
@@ -44,24 +44,17 @@ export const SERVICES = [
     color: 'terracotta',
   },
   {
+    id: 1,
+    name: 'Orthopaedic Physiotherapy',
+    description: 'Evidence-based treatment for joint, muscle and bone conditions — including knee, hip, shoulder and spine disorders. Our therapists use targeted manual therapy, exercise prescription and electrotherapy to restore strength and mobility without dependency on medication.',
+    icon: 'bone',
+    color: 'bark',
+  },
+  {
     id: 3,
     name: 'Neuro Physiotherapy',
     description: "Specialised rehabilitation for stroke, Parkinson's disease, multiple sclerosis and spinal cord injuries. Focused on rebuilding movement patterns, improving balance and restoring daily independence through progressive therapy.",
     icon: 'brain',
-    color: 'bark',
-  },
-  {
-    id: 5,
-    name: 'Vertigo Assessment & Treatment',
-    description: 'Specialised vestibular rehabilitation using BPPV repositioning manoeuvres (Epley, Semont) and balance retraining exercises. Effectively treats dizziness, positional vertigo and vestibular dysfunction — often resolving in just 1–3 sessions.',
-    icon: 'rotate',
-    color: 'terracotta',
-  },
-  {
-    id: 7,
-    name: 'Ayurveda & Panchakarma',
-    description: 'Authentic Ayurvedic consultations and classical therapies designed to restore balance, promote natural healing, and enhance overall well-being. By combining traditional Ayurvedic wisdom with a personalised approach, we provide effective solutions for lifestyle disorders, pain management, detoxification, stress relief, women\'s health, and preventive healthcare — helping you achieve lasting health and vitality naturally.',
-    icon: 'leaf',
     color: 'sage',
   },
   {
@@ -72,6 +65,27 @@ export const SERVICES = [
     color: 'terracotta',
   },
   {
+    id: 5,
+    name: 'Vertigo Assessment & Treatment',
+    description: 'Specialised vestibular rehabilitation using BPPV repositioning manoeuvres (Epley, Semont) and balance retraining exercises. Effectively treats dizziness, positional vertigo and vestibular dysfunction — often resolving in just 1–3 sessions.',
+    icon: 'rotate',
+    color: 'bark',
+  },
+  {
+    id: 11,
+    name: 'Antenatal & Postnatal Care',
+    description: 'Comprehensive physiotherapy and wellness support through every stage of pregnancy and postpartum recovery. Includes pelvic floor rehabilitation, diastasis recti management, posture correction, safe exercise guidance and lactation support.',
+    icon: 'heart',
+    color: 'sage',
+  },
+  {
+    id: 10,
+    name: 'Strength & Conditioning',
+    description: 'Structured, evidence-based training programs designed to improve strength, endurance, mobility, power, and overall physical performance. Through personalised assessment and goal-oriented exercise planning, we help athletes, fitness enthusiasts, and individuals of all ages enhance functional movement, prevent injuries, optimise performance, and build long-term physical resilience for a healthier and more active lifestyle.',
+    icon: 'dumbbell',
+    color: 'terracotta',
+  },
+  {
     id: 9,
     name: 'Yoga Therapy',
     description: 'Therapeutic yoga tailored to your health condition — not a generic fitness class. Addresses chronic pain, stress, flexibility, respiratory conditions and mental wellness through carefully sequenced asanas, pranayama and relaxation techniques.',
@@ -79,25 +93,11 @@ export const SERVICES = [
     color: 'bark',
   },
   {
-    id: 10,
-    name: 'Strength & Conditioning',
-    description: 'Structured, evidence-based training programs designed to improve strength, endurance, mobility, power, and overall physical performance. Through personalised assessment and goal-oriented exercise planning, we help athletes, fitness enthusiasts, and individuals of all ages enhance functional movement, prevent injuries, optimise performance, and build long-term physical resilience for a healthier and more active lifestyle.',
-    icon: 'dumbbell',
-    color: 'sage',
-  },
-  {
-    id: 11,
-    name: 'Antenatal & Postnatal Care',
-    description: 'Comprehensive physiotherapy and wellness support through every stage of pregnancy and postpartum recovery. Includes pelvic floor rehabilitation, diastasis recti management, posture correction, safe exercise guidance and lactation support.',
-    icon: 'heart',
-    color: 'terracotta',
-  },
-  {
     id: 12,
     name: 'Foot Scan Assessment & Treatment',
     description: 'Advanced computerised gait and foot pressure analysis to identify flat feet, high arches, overpronation and biomechanical imbalances. Followed by custom orthotic prescription, targeted foot exercises and footwear guidance.',
     icon: 'footprints',
-    color: 'bark',
+    color: 'sage',
   },
 ]
 
