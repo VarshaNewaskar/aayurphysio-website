@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Star, ExternalLink, Send, CheckCircle, MessageSquare, ThumbsUp, Loader2 } from 'lucide-react'
+import { Star, ExternalLink, Send, CheckCircle, MessageSquare, ThumbsUp } from 'lucide-react'
 import { TESTIMONIALS, CLINIC } from '../constants/data'
 import SectionLabel from './SectionLabel'
 
@@ -37,7 +37,6 @@ export default function Testimonials() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' })
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
-  const [sending, setSending] = useState(false)
 
   const validate = () => {
     const e = {}
@@ -47,37 +46,29 @@ export default function Testimonials() {
     return e
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
-    setSending(true)
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_WEB3FORMS_KEY',
-          subject: `⭐ New Patient Review (${rating}/5) from ${form.name}`,
-          from_name: form.name,
-          email: CLINIC.email,
-          message: `Name: ${form.name}\nPhone: ${form.phone || 'Not provided'}\nRating: ${rating}/5 — ${ratingLabel[rating]}\n\nReview:\n${form.message}`,
-        }),
-      })
-      const data = await res.json()
-      if (data.success) {
-        setSubmitted(true)
-        setForm({ name: '', phone: '', message: '' })
-        setRating(0)
-      } else {
-        setErrors({ submit: 'Something went wrong. Please try again.' })
-      }
-    } catch {
-      setErrors({ submit: 'Network error. Please try again.' })
-    } finally {
-      setSending(false)
-    }
+
+    const stars = '⭐'.repeat(rating)
+    const msg = [
+      `${stars} *Patient Review (${rating}/5 — ${ratingLabel[rating]})*`,
+      ``,
+      `*Name:* ${form.name}`,
+      form.phone ? `*Phone:* ${form.phone}` : null,
+      ``,
+      `*Review:*`,
+      form.message,
+    ].filter(l => l !== null).join('\n')
+
+    const waNumber = CLINIC.whatsapp.replace(/\D/g, '')
+    window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`, '_blank')
+
+    setSubmitted(true)
+    setForm({ name: '', phone: '', message: '' })
+    setRating(0)
   }
 
   const tabs = [
@@ -340,17 +331,13 @@ export default function Testimonials() {
 
                       <button
                         type="submit"
-                        disabled={sending}
-                        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-sage-dark hover:bg-bark text-white font-body font-semibold text-sm transition-colors duration-200 shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1ebe5c] text-white font-body font-semibold text-sm transition-colors duration-200 shadow-md"
                       >
-                        {sending
-                          ? <><Loader2 size={15} className="animate-spin" /> Sending...</>
-                          : <><Send size={15} /> Submit Review</>
-                        }
+                        <Send size={15} /> Send via WhatsApp
                       </button>
 
                       <p className="font-body text-xs text-text-muted text-center">
-                        Your review will be sent directly to our team
+                        Tapping submit will open WhatsApp with your review pre-filled — just hit Send.
                       </p>
                     </form>
                   </>
